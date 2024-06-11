@@ -13,3 +13,6 @@ Since the output of inference is a file with the predictions and gives only the 
 Lastly, track_phonemes.py is used to make the quantitave analysis in support of the qualitative evaluation. It gives the phonemes with the highest error rates and gives the wrong replacements of the predictions. 
 
 OPENNMT
+This model starts with loop_for_preprocess.sh which creates a src and tgt vocabulary and tokenize the words the way it needs. Train_folds.sh and test.folds.sh do training and inference. In this model there is no configuration file and the params are directly in the training file. I changed a few things in 'compute_stats_and_list_errors.py' and added the option of printing correct words too (before it was only wrong ones) and also printing the number of correctly guessed words over the total amount. Make_partitions and make_folds do what as their equivalent for the transformers. First create 11 partitions, and then arrange the folds the needed way to train the models with kfold cross validation. 
+
+
