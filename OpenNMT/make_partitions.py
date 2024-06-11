@@ -9,8 +9,6 @@ for index, line in enumerate(dataset):
     partitions[partition_index].append(line)
 
 output_dir = "/data/fragra/francesco/data/partitions/6_partitions"
-
-# Create the directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
 
 for partition_index, lines in partitions.items():
